@@ -140,8 +140,8 @@ AC.addEventListener("click", function(){
 ///////////////////////////////////////////
 // LLAMAR A LOS EVENTOS ANTERIORES POR TECLADO
 ///////////////////////////////////////////
-document.addEventListener('keydown', presionarTeclas);
-const tecla = {
+document.addEventListener('keydown', presionarTeclas); // este crack dice "si se presiona una tecla, vete a presionarTeclas() a ver que pex"
+const tecla = { //JSON sólo para no ver números a lo tonto en la función siguiente
   DCERO: 48,
   DNUEVE: 57,
   NCERO: 96,
@@ -158,40 +158,40 @@ const tecla = {
 }
 function presionarTeclas(teclaPresionada) {
   const press = teclaPresionada.keyCode;
-  if(press > tecla.NCERO && press <= tecla.NNUEVE
-    || press > tecla.DCERO && press <= tecla.DNUEVE)
+  if(press > tecla.NCERO && press <= tecla.NNUEVE // del 1 al 9 en el numpad
+    || press > tecla.DCERO && press <= tecla.DNUEVE) // o del 1 al 9 en el teclado digital
   { // si se escribió un número del 1 al 9, entra aquí
     btn[teclaPresionada.key].click();
   }
   else
     switch(teclaPresionada.keyCode) {
-      case tecla.DCERO:
-      case tecla.NCERO:
+      case tecla.DCERO: // 0, digital
+      case tecla.NCERO: // 0, pad numérico
         btn[0].click();
         break;
-      case tecla.NADICION:
+      case tecla.NADICION: // +, pad numérico
         adicion.click();
         break;
-      case tecla.NSUSTRACCION:
+      case tecla.NSUSTRACCION: // -, pad numérico
         sustraccion.click();
         break;
-      case tecla.NMULTIPLICACION:
+      case tecla.NMULTIPLICACION: // *, pad numérico
         multiplicacion.click();
         break;
-      case tecla.NDIVISION:
+      case tecla.NDIVISION: // /, pad numérico
         division.click();
         break;
-      case tecla.PUNTO:
+      case tecla.PUNTO: // ., pad numérico
       case tecla.NPUNTO:
         punto.click();
         break;
-      case tecla.ENTER:
+      case tecla.ENTER: // entrar
         igual.click();
         break;
-      case tecla.RETROCEDER:
+      case tecla.RETROCEDER: // backspace/retroceso
         retroceder.click();
         break;
-      case tecla.BORRAR:
+      case tecla.BORRAR: // delete/suprimir
         AC.click();
         break;
       }
