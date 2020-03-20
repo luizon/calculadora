@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="calculadora.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <div class="contenedor">
+    <h1 class="text-center" id="textoDeEntrada">
+      Pruebe con o sin su teclado, funciona bien con ambos 8]
+    </h1>
+    <div class="calculadora border border-primary">
+      <div class="pantalla text-right pr-4">
+        <h3 id="salida">0</h3>
+      </div>
+      <div class="col contenedorDeBotones">
+        <div class="botones row">
+          <button class="boton col" id="AC"> AC </button>
+          <button class="boton col" id="retroceder"> <img src="retroceder.png" alt="Retroceder"> </button>
+        </div>
+        <div class="botones row">
+          <button class="boton col" id="siete"> 7 </button>
+          <button class="boton col" id="ocho"> 8 </button>
+          <button class="boton col" id="nueve"> 9 </button>
+          <button class="boton col" id="division"> / </button>
+        </div>
+        <div class="botones row">
+          <button class="boton col" id="cuatro"> 4 </button>
+          <button class="boton col" id="cinco"> 5 </button>
+          <button class="boton col" id="seis"> 6 </button>
+          <button class="boton col" id="multiplicacion"> * </button>
+        </div>
+        <div class="botones row">
+          <button class="boton col" id="uno"> 1 </button>
+          <button class="boton col" id="dos"> 2 </button>
+          <button class="boton col" id="tres"> 3 </button>
+          <button class="boton col" id="sustraccion"> - </button>
+        </div>
+        <div class="botones row">
+          <button class="boton col" id="cero"> 0 </button>
+          <button class="boton col" id="punto"> . </button>
+          <button class="boton col" id="igual"> = </button>
+          <button class="boton col" id="adicion"> + </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="calculadora.js"></script>
+
+</html>
