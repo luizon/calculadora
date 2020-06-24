@@ -240,7 +240,14 @@ function realizarOperacionDeFondo() {
       return parseFloat(valorAnterior) * parseFloat(valorActual);
       break;
     case 'division':
-      return parseFloat(valorAnterior) / parseFloat(valorActual);
+      var valor = parseFloat(valorAnterior) / parseFloat(valorActual);
+      if (valor == "Infinity") { // si se divide entre 0 
+        window.alert("No dividas entre 0!")
+        return 0;
+      }
+      else {
+        return valor; 
+      }
       break;
     case 'igual':
       actualizarPantalla('Esto no debería haber pasado nunca xD');
